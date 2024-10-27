@@ -1,4 +1,4 @@
-﻿# test_calc
+﻿# OOPcalc
 
 # Тестовое задание для курса по Node.js
 
