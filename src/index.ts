@@ -8,11 +8,11 @@ class calc {
         console.log(`Калькулятор инициализирован с памятью: ${this.memory}`);
     }
 
-    private validateNumber(value: number): void {
-        if (typeof value !== 'number') {
-            throw new Error("Ошибка: аргумент должен быть числом!");
-        }
-    }
+    // private validateNumber(value: number): void {
+    //     if (typeof value !== 'number') {
+    //         throw new Error("Ошибка: аргумент должен быть числом!");
+    //     }
+    // }
 
     private logOperation(operation: string): void {
         this.history.push(operation);
@@ -29,7 +29,7 @@ class calc {
     }
 
     add (value: number): number {
-        this.validateNumber(value);
+        // this.validateNumber(value);
         const result = this.memory + value;
         this.logOperation(`Сложение: ${this.memory} + ${value} = ${result}`);
         this.memory = result;
@@ -37,7 +37,7 @@ class calc {
     }
 
     subtract (value: number): number {
-        this.validateNumber(value);
+        // this.validateNumber(value);
         const result = this.memory - value;
         this.logOperation(`Вычитание: ${this.memory} - ${value} = ${result}`);
         this.memory = result;
@@ -45,7 +45,7 @@ class calc {
     }
 
     divide (value: number): number {
-        this.validateNumber(value);
+        // this.validateNumber(value);
         if (value === 0) {
             throw new Error("Ошибка: деление на ноль!");
         }
@@ -56,7 +56,7 @@ class calc {
     }
 
     multiply (value: number): number {
-        this.validateNumber(value);
+        // this.validateNumber(value);
         const result = this.memory * value;
         this.logOperation(`Умножение: ${this.memory} * ${value} = ${result}`);
         this.memory = result;
@@ -64,7 +64,7 @@ class calc {
     }
 
     power (value: number): number {
-        this.validateNumber(value);
+        // this.validateNumber(value);
         const result = Math.pow(this.memory,value);
         this.logOperation(`Возведение в степень: ${this.memory} ^ ${value} = ${result}`);
         this.memory = result;
